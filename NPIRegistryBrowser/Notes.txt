@@ -1,0 +1,57 @@
+Project Setup
+=============
+
+01) Add NuGet packages.
+- Caliburn.Micro
+- Newtonsoft.Json
+
+02) Create Startup.cs.
+
+class Startup : BootstrapperBase    
+{
+    public Startup()
+    {
+        Initialize();
+    }
+
+    protected override void OnStartup(object sender, StartupEventArgs e)
+    {
+        DisplayRootViewForAsync<MainViewModel>();
+    }
+}
+
+03) Create folders:
+- ViewModels
+- Views
+
+04) Create view and view model classes: 
+- MainView.xaml
+- MainViewModes.cs
+
+05) Delete MainWindow.xaml.
+
+06) Replace App.xaml with the following:
+<Application x:Class="NPIRegistryBrowser.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:NPIRegistryBrowser" >
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <local:Startup x:Key="Startup" />
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
+
+
+
+
+
+
+
+
+
+
