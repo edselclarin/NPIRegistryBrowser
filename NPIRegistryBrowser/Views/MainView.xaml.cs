@@ -22,6 +22,8 @@ namespace NPIRegistryBrowser.Views
         public MainView()
         {
             InitializeComponent();
+
+            WindowState = WindowState.Maximized;
         }
     }
 }
