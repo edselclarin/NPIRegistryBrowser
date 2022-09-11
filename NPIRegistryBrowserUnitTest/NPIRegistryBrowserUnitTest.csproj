@@ -59,7 +59,13 @@
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\NPIResultsExtension.cs" />
+    <Compile Include="Query\BaseQuery.cs" />
     <Compile Include="Models\NPIResults.cs" />
+    <Compile Include="Models\NPISearchParams.cs" />
+    <Compile Include="Query\CityQuery.cs" />
+    <Compile Include="Query\DoctorQuery.cs" />
+    <Compile Include="Query\ZipCodeQuery.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
